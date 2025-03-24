@@ -63,6 +63,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
       () {
         // Get.to(() => const HomeView(),
         //     transition: Transition.fade, duration: kTranstionDuration);
+        if (!mounted) return; // التأكد من أن الـ Widget لا يزال في الشجرة
+//=================================================================================================
         GoRouter.of(context).push(AppRouter.kHomeView);
       },
     );
